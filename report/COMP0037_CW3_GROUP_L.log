@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.14)  31 MAR 2020 08:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.14)  19 APR 2020 06:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**COMP0037_CW2_GROUP_L.tex
-(./COMP0037_CW2_GROUP_L.tex
+**COMP0037_CW3_GROUP_L.tex
+(./COMP0037_CW3_GROUP_L.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -373,8 +373,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
-(./COMP0037_CW2_GROUP_L.aux)
-\openout1 = `COMP0037_CW2_GROUP_L.aux'.
+(./COMP0037_CW3_GROUP_L.aux)
+\openout1 = `COMP0037_CW3_GROUP_L.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
@@ -475,9 +475,9 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(./COMP0037_CW2_GROUP_L.out) (./COMP0037_CW2_GROUP_L.out)
+(./COMP0037_CW3_GROUP_L.out) (./COMP0037_CW3_GROUP_L.out)
 \@outlinefile=\write3
-\openout3 = `COMP0037_CW2_GROUP_L.out'.
+\openout3 = `COMP0037_CW3_GROUP_L.out'.
 
 LaTeX Info: Redefining \microtypecontext on input line 33.
 Package microtype Info: Generating PDF output.
@@ -563,214 +563,78 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 40.
-<graphs/part1/reactivePlanningSystem.PNG, id=57, 346.29375pt x 391.4625pt>
-File: graphs/part1/reactivePlanningSystem.PNG Graphic file (type png)
-<use graphs/part1/reactivePlanningSystem.PNG>
-Package pdftex.def Info: graphs/part1/reactivePlanningSystem.PNG  used on input
- line 48.
-(pdftex.def)             Requested size: 173.14644pt x 195.73076pt.
-<graphs/part1/code.PNG, id=60, 740.7675pt x 86.3225pt>
-File: graphs/part1/code.PNG Graphic file (type png)
-<use graphs/part1/code.PNG>
-Package pdftex.def Info: graphs/part1/code.PNG  used on input line 60.
-(pdftex.def)             Requested size: 444.46393pt x 51.79388pt.
-<graphs/part1/1-1/GUI.png, id=63, 653.44125pt x 487.8225pt>
-File: graphs/part1/1-1/GUI.png Graphic file (type png)
-<use graphs/part1/1-1/GUI.png>
-Package pdftex.def Info: graphs/part1/1-1/GUI.png  used on input line 70.
-(pdftex.def)             Requested size: 211.3883pt x 157.81096pt.
-<graphs/part1/1-1/plannerOG.png, id=64, 943.525pt x 735.74875pt>
-File: graphs/part1/1-1/plannerOG.png Graphic file (type png)
-<use graphs/part1/1-1/plannerOG.png>
-Package pdftex.def Info: graphs/part1/1-1/plannerOG.png  used on input line 72.
-
-(pdftex.def)             Requested size: 211.3883pt x 164.82904pt.
-<graphs/part1/1-1/plannerSG.png, id=65, 943.525pt x 735.74875pt>
-File: graphs/part1/1-1/plannerSG.png Graphic file (type png)
-<use graphs/part1/1-1/plannerSG.png>
-Package pdftex.def Info: graphs/part1/1-1/plannerSG.png  used on input line 74.
-
-(pdftex.def)             Requested size: 211.3883pt x 164.82904pt.
-<graphs/part1/1-1/mapperNodeOG.png, id=66, 811.03pt x 634.37pt>
-File: graphs/part1/1-1/mapperNodeOG.png Graphic file (type png)
-<use graphs/part1/1-1/mapperNodeOG.png>
-Package pdftex.def Info: graphs/part1/1-1/mapperNodeOG.png  used on input line 
-76.
-(pdftex.def)             Requested size: 211.3883pt x 165.33885pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./graph
-s/part1/reactivePlanningSystem.PNG>]
-<graphs/part1/1-2/GUI.png, id=81, 773.89125pt x 517.935pt>
-File: graphs/part1/1-2/GUI.png Graphic file (type png)
-<use graphs/part1/1-2/GUI.png>
-Package pdftex.def Info: graphs/part1/1-2/GUI.png  used on input line 84.
-(pdftex.def)             Requested size: 211.3883pt x 141.47234pt.
-<graphs/part1/1-2/plannerOG.png, id=82, 943.525pt x 735.74875pt>
-File: graphs/part1/1-2/plannerOG.png Graphic file (type png)
-<use graphs/part1/1-2/plannerOG.png>
-Package pdftex.def Info: graphs/part1/1-2/plannerOG.png  used on input line 86.
-
-(pdftex.def)             Requested size: 211.3883pt x 164.82904pt.
-<graphs/part1/1-2/plannerSG.png, id=83, 943.525pt x 735.74875pt>
-File: graphs/part1/1-2/plannerSG.png Graphic file (type png)
-<use graphs/part1/1-2/plannerSG.png>
-Package pdftex.def Info: graphs/part1/1-2/plannerSG.png  used on input line 88.
-
-(pdftex.def)             Requested size: 211.3883pt x 164.82904pt.
-<graphs/part1/1-2/mapperNodeOG.png, id=84, 808.01875pt x 637.38126pt>
-File: graphs/part1/1-2/mapperNodeOG.png Graphic file (type png)
-<use graphs/part1/1-2/mapperNodeOG.png>
-Package pdftex.def Info: graphs/part1/1-2/mapperNodeOG.png  used on input line 
-90.
-(pdftex.def)             Requested size: 211.3883pt x 166.74612pt.
-
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./graphs/part1/code.PNG> <./graphs/part1/1-1/GUI.png> <./graphs/part1/1-1/
-plannerOG.png> <./graphs/part1/1-1/plannerSG.png> <./graphs/part1/1-1/mapperNod
-eOG.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./graphs/part1/1-2/GUI.png> <./graphs/part1/1-2/plannerOG.png> <./graphs/p
-art1/1-2/plannerSG.png> <./graphs/part1/1-2/mapperNodeOG.png>]
-<graphs/part2/2-3/WaveFrontDetection.png, id=112, 571.13374pt x 718.685pt>
-File: graphs/part2/2-3/WaveFrontDetection.png Graphic file (type png)
-<use graphs/part2/2-3/WaveFrontDetection.png>
-Package pdftex.def Info: graphs/part2/2-3/WaveFrontDetection.png  used on input
- line 122.
-(pdftex.def)             Requested size: 285.56618pt x 359.34161pt.
-<graphs/part2/2-3/closest.png, id=113, 587.19376pt x 154.5775pt>
-File: graphs/part2/2-3/closest.png Graphic file (type png)
-<use graphs/part2/2-3/closest.png>
-Package pdftex.def Info: graphs/part2/2-3/closest.png  used on input line 129.
-(pdftex.def)             Requested size: 293.59616pt x 77.28854pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-<graphs/part3/GUI.png, id=123, 333.245pt x 256.45813pt>
-File: graphs/part3/GUI.png Graphic file (type png)
-<use graphs/part3/GUI.png>
-Package pdftex.def Info: graphs/part3/GUI.png  used on input line 147.
-(pdftex.def)             Requested size: 211.3883pt x 162.68082pt.
-<graphs/part3/plannerOG.png, id=124, 943.525pt x 734.745pt>
-File: graphs/part3/plannerOG.png Graphic file (type png)
-<use graphs/part3/plannerOG.png>
-Package pdftex.def Info: graphs/part3/plannerOG.png  used on input line 149.
-(pdftex.def)             Requested size: 211.3883pt x 164.60417pt.
-<graphs/part3/plannerSG.png, id=125, 934.99312pt x 718.18312pt>
-File: graphs/part3/plannerSG.png Graphic file (type png)
-<use graphs/part3/plannerSG.png>
-Package pdftex.def Info: graphs/part3/plannerSG.png  used on input line 151.
-(pdftex.def)             Requested size: 211.3883pt x 162.36229pt.
-<graphs/part3/mapperNodeOG.png, id=126, 810.02625pt x 637.38126pt>
-File: graphs/part3/mapperNodeOG.png Graphic file (type png)
-<use graphs/part3/mapperNodeOG.png>
-Package pdftex.def Info: graphs/part3/mapperNodeOG.png  used on input line 153.
-
-(pdftex.def)             Requested size: 211.3883pt x 166.32793pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./graphs/part2/2-3/WaveFrontDetection.png> <./graphs/part2/2-3/closest.png
->]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./graphs/part3/GUI.png> <./graphs/part3/plannerOG.png> <./graphs/part3/pla
-nnerSG.png> <./graphs/part3/mapperNodeOG.png>]
-<graphs/part4/4-2/1.png, id=147, 807.015pt x 235.88126pt>
-File: graphs/part4/4-2/1.png Graphic file (type png)
-<use graphs/part4/4-2/1.png>
-Package pdftex.def Info: graphs/part4/4-2/1.png  used on input line 190.
-(pdftex.def)             Requested size: 375.80542pt x 109.84201pt.
-<graphs/part4/4-2/2.png, id=148, 807.015pt x 218.8175pt>
-File: graphs/part4/4-2/2.png Graphic file (type png)
-<use graphs/part4/4-2/2.png>
-Package pdftex.def Info: graphs/part4/4-2/2.png  used on input line 192.
-(pdftex.def)             Requested size: 375.80542pt x 101.89598pt.
- [7 <./graphs/part4/4-2/1.png> <./graphs/part4/4-2/2.png>]
-<graphs/part4/4-3/entropy.png, id=172, 578.16pt x 433.62pt>
-File: graphs/part4/4-3/entropy.png Graphic file (type png)
-<use graphs/part4/4-3/entropy.png>
-Package pdftex.def Info: graphs/part4/4-3/entropy.png  used on input line 203.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8 <./graphs/part4/4-3/entropy.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 222--226
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 60--64
 []\T1/ptm/m/n/10 (+20) Brian Ya-mauchi  (1997)  A Frontier-Based Ap-proach for 
 Au-tonomous Ex-plo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--226
+Underfull \hbox (badness 10000) in paragraph at lines 60--64
 \T1/ptm/m/n/10 (+20) ration  \T1/ptm/m/it/10 (+20) <https://www.semanticscholar
 .org/paper/A-frontier-based-approach-for-autonomous-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--232
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 []\T1/ptm/m/n/10 (+20) Callum Rhodes; Cun-jia Liu; Wen-Hua Chen  (2019)  An In-
 for-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--232
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 \T1/ptm/m/n/10 (+20) ma-tion The-o-retic Ap-proach to Path Plan-ning for Fron-t
 ier Ex-plo-ration
  []
 
 
-Overfull \hbox (100.19485pt too wide) in paragraph at lines 228--232
+Overfull \hbox (100.19485pt too wide) in paragraph at lines 66--70
 \T1/ptm/m/it/10 (-20) <https://www.researchgate.net/publication/331929185_An_In
 formation_Theoretic_Approach_to_Path_Planning_for_Frontier_Exploration>\T1/ptm/
 m/n/10 (-20) . 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
-[9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
- (./COMP0037_CW2_GROUP_L.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
-Package rerunfilecheck Info: File `COMP0037_CW2_GROUP_L.out' has not changed.
-(rerunfilecheck)             Checksum: 70631ABDAAD86B0E7F85EFE42BA2240B;907.
 
+Package caption Warning: Unused \captionsetup[figure] on input line 37.
+See the caption package documentation for explanation.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+ (./COMP0037_CW3_GROUP_L.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package rerunfilecheck Info: File `COMP0037_CW3_GROUP_L.out' has not changed.
+(rerunfilecheck)             Checksum: D848DAA3C3D1E19D47553A958BDE84A0;116.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 9784 strings out of 492616
- 152711 string characters out of 6129480
- 279109 words of memory out of 5000000
- 13384 multiletter control sequences out of 15000+600000
- 43122 words of font info for 109 fonts, out of 8000000 for 9000
+ 9537 strings out of 492616
+ 148254 string characters out of 6129480
+ 273641 words of memory out of 5000000
+ 13281 multiletter control sequences out of 15000+600000
+ 37055 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,10n,45p,1227b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,45p,253b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/
-fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/urw/times/utmri8a.pfb>
-Output written on COMP0037_CW2_GROUP_L.pdf (9 pages, 3107557 bytes).
+live/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on COMP0037_CW3_GROUP_L.pdf (3 pages, 66241 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
- 59 named destinations out of 1000 (max. 500000)
- 22728 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 58 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 18449 words of extra memory for PDF output out of 20736 (max. 10000000)
 

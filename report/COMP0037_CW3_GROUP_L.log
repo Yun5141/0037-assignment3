@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.14)  24 APR 2020 08:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.14)  24 APR 2020 12:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -588,61 +588,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--139
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
+<graphs/part2/2-1/A.png, id=80, 945.5325pt x 737.75626pt>
+File: graphs/part2/2-1/A.png Graphic file (type png)
+<use graphs/part2/2-1/A.png>
+Package pdftex.def Info: graphs/part2/2-1/A.png  used on input line 244.
+(pdftex.def)             Requested size: 150.32503pt x 117.28917pt.
+<graphs/part2/2-1/B.png, id=82, 945.5325pt x 737.75626pt>
+File: graphs/part2/2-1/B.png Graphic file (type png)
+<use graphs/part2/2-1/B.png>
+Package pdftex.def Info: graphs/part2/2-1/B.png  used on input line 246.
+(pdftex.def)             Requested size: 150.32503pt x 117.28917pt.
+<graphs/part2/2-1/C.png, id=83, 945.5325pt x 737.75626pt>
+File: graphs/part2/2-1/C.png Graphic file (type png)
+<use graphs/part2/2-1/C.png>
+Package pdftex.def Info: graphs/part2/2-1/C.png  used on input line 248.
+(pdftex.def)             Requested size: 150.32503pt x 117.28917pt.
+<graphs/part2/2-1/D.png, id=84, 945.5325pt x 737.75626pt>
+File: graphs/part2/2-1/D.png Graphic file (type png)
+<use graphs/part2/2-1/D.png>
+Package pdftex.def Info: graphs/part2/2-1/D.png  used on input line 250.
+(pdftex.def)             Requested size: 164.4171pt x 128.28749pt.
+<graphs/part2/2-1/E.png, id=85, 945.5325pt x 737.75626pt>
+File: graphs/part2/2-1/E.png Graphic file (type png)
+<use graphs/part2/2-1/E.png>
+Package pdftex.def Info: graphs/part2/2-1/E.png  used on input line 252.
+(pdftex.def)             Requested size: 164.4171pt x 128.28749pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 247--251
+ [5 <./graphs/part2/2-1/A.png> <./graphs/part2/2-1/B.png> <./graphs/part2/2-1/C
+.png> <./graphs/part2/2-1/D.png> <./graphs/part2/2-1/E.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
 []\T1/ptm/m/n/10 (+20) Brian Ya-mauchi  (1997)  A Frontier-Based Ap-proach for 
 Au-tonomous Ex-plo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--251
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
 \T1/ptm/m/n/10 (+20) ration  \T1/ptm/m/it/10 (+20) <https://www.semanticscholar
 .org/paper/A-frontier-based-approach-for-autonomous-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--257
+Underfull \hbox (badness 10000) in paragraph at lines 283--287
 []\T1/ptm/m/n/10 (+20) Callum Rhodes; Cun-jia Liu; Wen-Hua Chen  (2019)  An In-
 for-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--257
+Underfull \hbox (badness 10000) in paragraph at lines 283--287
 \T1/ptm/m/n/10 (+20) ma-tion The-o-retic Ap-proach to Path Plan-ning for Fron-t
 ier Ex-plo-ration
  []
 
 
-Overfull \hbox (100.19485pt too wide) in paragraph at lines 253--257
+Overfull \hbox (100.19485pt too wide) in paragraph at lines 283--287
 \T1/ptm/m/it/10 (-20) <https://www.researchgate.net/publication/331929185_An_In
 formation_Theoretic_Approach_to_Path_Planning_for_Frontier_Exploration>\T1/ptm/
 m/n/10 (-20) . 
  []
 
-
-Package caption Warning: Unused \captionsetup[figure] on input line 37.
-See the caption package documentation for explanation.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 314.
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 314.
  (./COMP0037_CW3_GROUP_L.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 314.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 314.
 Package rerunfilecheck Info: File `COMP0037_CW3_GROUP_L.out' has not changed.
-(rerunfilecheck)             Checksum: BCDAAC55598E2C96EA542E1BC5DF1570;312.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
+(rerunfilecheck)             Checksum: 68152AD9B2A853FE973ECF793EF13980;459.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 314.
  ) 
 Here is how much of TeX's memory you used:
- 9572 strings out of 492616
- 148626 string characters out of 6129480
- 282644 words of memory out of 5000000
- 13285 multiletter control sequences out of 15000+600000
- 37705 words of font info for 67 fonts, out of 8000000 for 9000
+ 9640 strings out of 492616
+ 149678 string characters out of 6129480
+ 282730 words of memory out of 5000000
+ 13316 multiletter control sequences out of 15000+600000
+ 41302 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,45p,253b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,45p,788b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
 live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
@@ -659,10 +682,10 @@ mf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2019/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/ur
 w/times/utmri8a.pfb>
-Output written on COMP0037_CW3_GROUP_L.pdf (6 pages, 152779 bytes).
+Output written on COMP0037_CW3_GROUP_L.pdf (6 pages, 585244 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 18481 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 22626 words of extra memory for PDF output out of 24883 (max. 10000000)
 

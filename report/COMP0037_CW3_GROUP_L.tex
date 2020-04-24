@@ -230,6 +230,36 @@ Therefore, the upper bound on the value of the path length of the path going dow
 % -------------------------------------------------------------------------------------------
 \section{Implement System in ROS}
 
+% ------------------
+\subsection{}
+
+We first add a function in the class which returns a cell coordinate as the intermediate destination, according to the aisle passed in. Then in the \textit{planPathToGoalViaAisle()}, we call this function to get the intermediate cell coordinate and search a path from the given start cell to the intermediate cell. If there was a path then we extract and store this path and then search the second path which is from the intermediate cell to the given goal cell. If the second path existed, we extract it and link it to the first one using the provided function \textit{addToEnd()}. At the end of this function we call the \textit{searchGridDraw} to show the first path so that the two paths can be seen simultaneously.
+
+
+The result is shown in Fig. \ref{performance2.1}. The start point is marked purple, the intermediate cell is marked green, and the goal is marked blue.
+
+\begin{figure}[H]
+\centering  
+\subfigure[Via Aisle A]{
+\includegraphics[width=0.32\textwidth]{graphs/part2/2-1/A.png}}
+\subfigure[Via Aisle B]{
+\includegraphics[width=0.32\textwidth]{graphs/part2/2-1/B.png}}
+\subfigure[Via Aisle C]{
+\includegraphics[width=0.32\textwidth]{graphs/part2/2-1/C.png}}
+\subfigure[Via Aisle D]{
+\includegraphics[width=0.35\textwidth]{graphs/part2/2-1/D.png}}
+\subfigure[Via Aisle E]{
+\includegraphics[width=0.35\textwidth]{graphs/part2/2-1/E.png}}
+\caption{Planned Routes Down all the Different Initial Aisles}
+\label{performance2.1}
+\end{figure}
+
+% ------------------
+\subsection{}
+
+% ------------------
+\subsection{}
+
 \pagebreak
 % -------------------------------------------------------------------------------------------
 

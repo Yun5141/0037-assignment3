@@ -45,7 +45,7 @@ class ReactivePlannerController(PlannerControllerBase):
     # Choose the first aisle the robot will initially drive down.
     # This is based on the prior.
     def chooseInitialAisle(self, startCellCoords, goalCellCoords):
-        return Aisle.A
+        return Aisle.D
 
     # Choose the subdquent aisle the robot will drive down
     def chooseAisle(self, startCellCoords, goalCellCoords):
@@ -58,6 +58,20 @@ class ReactivePlannerController(PlannerControllerBase):
     # This method will wait until the obstacle has cleared and the robot can move.
     def waitUntilTheObstacleClears(self):
         pass
+
+    def getAisleCellCoords(self, aisle):
+        if(aisle == Aisle.A):
+            return (29,15)      # To enter the aisle from the bottom, the y value must be lower than the mid point which is 38
+        elif(aisle == Aisle.B):
+            return (43,15)
+        elif(aisle == Aisle.C):
+            return (58,15)
+        elif(aisle == Aisle.D):
+            return (74,15)
+        elif(aisle == Aisle.E):
+            return (88,15)
+        else:
+            rospy.logerr("Undefined Aisle")
     
     # Plan a path to the goal which will go down the designated aisle. The code, as
     # currently implemented simply tries to drive from the start to the goal without
@@ -69,18 +83,37 @@ class ReactivePlannerController(PlannerControllerBase):
         if self.aisleToDriveDown is None:
             self.aisleToDriveDown = aisle
 
+        aisleCellCoords = self.getAisleCellCoords(self.aisleToDriveDown)
+
+        print("Goal cell coords:" + str(goalCellCoords))
+        print("Aisle cell coords:" + str(aisleCellCoords))
+
         # Implement your method here to construct a path which will drive the robot
         # from the start to the goal via the aisle.
-        pathToGoalFound = self.planner.search(startCellCoords, goalCellCoords)    
 
+        # get the path 1 which is from the start to the aisle
+        pathToAisleFound = self.planner.search(startCellCoords, aisleCellCoords)    
         # If we can't reach the goal, give up and return
-        if pathToGoalFound is False:
+        if pathToAisleFound is False:
+            rospy.logwarn("Could not find a path to the goal at (%d, %d)", \
+                            aisleCellCoords[0], aisleCellCoords[1])
+            return None
+        # Extract the path
+        path1 = self.planner.extractPathToGoal()
+        currentPlannedPath = path1
+
+        # get the path 2 which is from the aisle to the goal
+        pathFromAisleToGoalFound = self.planner.search(aisleCellCoords, goalCellCoords)    
+        # If we can't reach the goal, give up and return
+        if pathFromAisleToGoalFound is False:
             rospy.logwarn("Could not find a path to the goal at (%d, %d)", \
                             goalCellCoords[0], goalCellCoords[1])
             return None
-
         # Extract the path
-        currentPlannedPath = self.planner.extractPathToGoal()
+        currentPlannedPath.addToEnd(self.planner.extractPathToGoal())
+
+        self.planner.searchGridDrawer.drawPathGraphicsWithCustomColour(path1,'yellow')
+        self.planner.searchGridDrawer.rectangles[startCellCoords[0]][startCellCoords[1]].setFill('purple');
 
         return currentPlannedPath
 

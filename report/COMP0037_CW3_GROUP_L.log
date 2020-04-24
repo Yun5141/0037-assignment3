@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.14)  19 APR 2020 06:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.14)  24 APR 2020 08:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -564,40 +564,58 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 40.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \vbox (badness 4266) has occurred while \output is active []
 
  [1
 
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+[3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 60--64
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 247--251
 []\T1/ptm/m/n/10 (+20) Brian Ya-mauchi  (1997)  A Frontier-Based Ap-proach for 
 Au-tonomous Ex-plo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--64
+Underfull \hbox (badness 10000) in paragraph at lines 247--251
 \T1/ptm/m/n/10 (+20) ration  \T1/ptm/m/it/10 (+20) <https://www.semanticscholar
 .org/paper/A-frontier-based-approach-for-autonomous-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
+Underfull \hbox (badness 10000) in paragraph at lines 253--257
 []\T1/ptm/m/n/10 (+20) Callum Rhodes; Cun-jia Liu; Wen-Hua Chen  (2019)  An In-
 for-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
+Underfull \hbox (badness 10000) in paragraph at lines 253--257
 \T1/ptm/m/n/10 (+20) ma-tion The-o-retic Ap-proach to Path Plan-ning for Fron-t
 ier Ex-plo-ration
  []
 
 
-Overfull \hbox (100.19485pt too wide) in paragraph at lines 66--70
+Overfull \hbox (100.19485pt too wide) in paragraph at lines 253--257
 \T1/ptm/m/it/10 (-20) <https://www.researchgate.net/publication/331929185_An_In
 formation_Theoretic_Approach_to_Path_Planning_for_Frontier_Exploration>\T1/ptm/
 m/n/10 (-20) . 
@@ -607,34 +625,44 @@ m/n/10 (-20) .
 Package caption Warning: Unused \captionsetup[figure] on input line 37.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
-[3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./COMP0037_CW3_GROUP_L.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `COMP0037_CW3_GROUP_L.out' has not changed.
-(rerunfilecheck)             Checksum: D848DAA3C3D1E19D47553A958BDE84A0;116.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
+(rerunfilecheck)             Checksum: BCDAAC55598E2C96EA542E1BC5DF1570;312.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 9537 strings out of 492616
- 148254 string characters out of 6129480
- 273641 words of memory out of 5000000
- 13281 multiletter control sequences out of 15000+600000
- 37055 words of font info for 57 fonts, out of 8000000 for 9000
+ 9572 strings out of 492616
+ 148626 string characters out of 6129480
+ 282644 words of memory out of 5000000
+ 13285 multiletter control sequences out of 15000+600000
+ 37705 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,45p,253b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,45p,253b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/urw/times/utmri8a.pfb>
-Output written on COMP0037_CW3_GROUP_L.pdf (3 pages, 66241 bytes).
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
+9/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2019/texmf
+-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/font
+s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on COMP0037_CW3_GROUP_L.pdf (6 pages, 152779 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 18449 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 18481 words of extra memory for PDF output out of 20736 (max. 10000000)
 

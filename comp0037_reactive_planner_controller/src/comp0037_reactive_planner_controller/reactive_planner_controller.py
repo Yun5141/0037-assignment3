@@ -57,16 +57,19 @@ class ReactivePlannerController(PlannerControllerBase):
     # This is based on the prior.
     def chooseInitialAisle(self, startCellCoords, goalCellCoords):
 
+        # plan the two paths
         pathB = self.planPathToGoalViaAisle(startCellCoords, goalCellCoords, Aisle.B)
         pathC = self.planPathToGoalViaAisle(startCellCoords, goalCellCoords, Aisle.C)
 
+        # draw the paths
         self.planner.searchGridDrawer.drawPathGraphicsWithCustomColour(pathB,'yellow')
         self.planner.searchGridDrawer.drawPathGraphicsWithCustomColour(pathC,'blue')
 
+        # get travel costs
         pathCost_B = pathB.travelCost
         pathCost_C = pathC.travelCost
 
-        # output threshold values and ask for waiting time input
+        # calculate and output threshold values and ask for waiting time input
         print("\n---Part 2-3---")
         print('pathCost_B: '+str(pathCost_B))
         print('pathCost_C: '+str(pathCost_C))
@@ -88,7 +91,7 @@ class ReactivePlannerController(PlannerControllerBase):
         return Aisle.E
 
     # ------- Part 2-2 -------
-    
+
     # Return whether the robot should wait for the obstacle to clear or not.
     def shouldWaitUntilTheObstacleClears(self, startCellCoords, goalCellCoords):
 

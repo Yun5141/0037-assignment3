@@ -57,16 +57,19 @@ class ReactivePlannerController(PlannerControllerBase):
     # This is based on the prior.
     def chooseInitialAisle(self, startCellCoords, goalCellCoords):
 
+        # plan the two paths
         pathB = self.planPathToGoalViaAisle(startCellCoords, goalCellCoords, Aisle.B)
         pathC = self.planPathToGoalViaAisle(startCellCoords, goalCellCoords, Aisle.C)
 
+        # draw the paths
         self.planner.searchGridDrawer.drawPathGraphicsWithCustomColour(pathB,'yellow')
         self.planner.searchGridDrawer.drawPathGraphicsWithCustomColour(pathC,'blue')
 
+        # get travel costs
         pathCost_B = pathB.travelCost
         pathCost_C = pathC.travelCost
 
-        # output threshold values and ask for waiting time input
+        # calculate and output threshold values and ask for waiting time input
         print("\n---Part 2-3---")
         print('pathCost_B: '+str(pathCost_B))
         print('pathCost_C: '+str(pathCost_C))
@@ -88,10 +91,6 @@ class ReactivePlannerController(PlannerControllerBase):
         return Aisle.E
 
     # ------- Part 2-2 -------
-    def getPathCost(self,startCellCoords,goalCellCoords):
-        pathFound = self.planner.search(startCellCoords, goalCellCoords)
-        path = self.planner.extractPathToGoal()
-        return path.travelCost
 
     # Return whether the robot should wait for the obstacle to clear or not.
     def shouldWaitUntilTheObstacleClears(self, startCellCoords, goalCellCoords):
@@ -100,7 +99,9 @@ class ReactivePlannerController(PlannerControllerBase):
         remainingOriginalPathCost = 0
         oldFullPathCost = self.currentPlannedPath.travelCost
         originalStartCell = self.currentPlannedPath.waypoints[0]
-        remainingOriginalPathCost = oldFullPathCost - self.getPathCost(originalStartCell.coords, startCellCoords)
+        path0Found = self.planner.search(originalStartCell.coords, startCellCoords) # note that startCellCoords is the robot current position
+        path0 = self.planner.extractPathToGoal()
+        remainingOriginalPathCost = oldFullPathCost - path0.travelCost
 
         # --- new path cost ---
         newPath = self.planPathToGoalViaAisle(startCellCoords, goalCellCoords,self.chooseAisle(startCellCoords,goalCellCoords))

@@ -39,194 +39,90 @@
 % -------------------------------------------------------------------------------------------
 \section{Decision Re-Plan Policy}
 
-Suppose B1 is the cell where the robot first detects the obstacle $O_{B}$. 
-
-Suppose C1 is a cell on the aisle C at the same horizontal level as B1, as illustrated in the Figure 1-c on the assignment sheet. 
-
 Let $T_{W}$ be the time the robot has to wait after the obstacle has been discovered.
-
-Let c be the cost function associated with the path, where $c(L(\pi)) = \mathbb{E}(L(\pi)) $. \\
 
 Note that:
 
-$L_{XY}$ is the shortest path length between two cells X and Y, 
-
-$T$ is the number of timesteps the obstacle remains in front of the robot where $ T = 0.5/ \lambda_{B} + \widetilde{T}$ with $\mathbb{E}(t) = 1/\lambda_{B}$ and $\mathbb{E}(\tilde{t}) = 0.5/ \lambda_{B}$ , 
+$T$ is the number of timesteps the obstacle remains in front of the robot. 
 
 $L_{W}$ is the cost of waiting a timestep.
 
 % ------------------
 \subsection{}
 
-Let $\pi_{1}$ be the policy that the robot waits for the obstacle $O_{B}$ to clear.
-
-Let $\pi_{2}$ be the policy that the robot plans a new path down aisle C.
-
-Then,
+Let $B_{1}$ be the cell where the robot first detects the obstacle.
+If the robot decides it will wait, then on average the path cost of waiting at aisle B is less than or equal to planning a new path down aisle C. So:
 \begin{align*}
-c(L(\pi_{1})) &= c(L_{IB_{1}} + T_{W} \cdot L_{W} + L_{B_{1}B} + L_{BC} + L_{CG}) \\
-c(L(\pi_{2})) &= c(L_{IB_{1}} +  L_{B_{1}C_{1}} + L_{C_{1}C} + L_{CG}) \\
+\mathbb{E}(L_{B_{1}BG} + \text{waiting cost}) &\leq \mathbb{E}(L_{B_{1}CG})	\\
+L_{B_{1}BG} + \mathbb{E}(T_{W}) * L_{W} &\leq L_{B_{1}CG} 	&\quad	&\Leftarrow \text{the path length and $L_{W}$ are constants}	\\
+\mathbb{E}(T_{W}) &\leq \frac{L_{B_{1}CG} - L_{B_{1}BG} } {L_{W}}	\\
+\frac{1}{\lambda_{B}} &\leq \frac{L_{B_{1}CG} - L_{B_{1}BG} } {L_{W}}	&\quad	&\Leftarrow  \mathbb{E}(T_{W}) = \mathbb{E}(T) = \frac{1}{\lambda_{B}} \\
+\lambda_{B} &\geq \frac {L_{W}} {L_{B_{1}CG} - L_{B_{1}BG} } 	\\
 \end{align*}
 
-When, on average, the waiting policy is better than the other one: 
-\begin{align*}
-c(L(\pi_{1})) &\leq c(L(\pi_{2}))  \\
-\mathbb{E}(L(\pi_{1})) &\leq \mathbb{E}(L(\pi_{2}))  \\
-\mathbb{E}(L_{IB_{1}} + T_{W} \cdot L_{W} + L_{B_{1}B} + L_{BC} + L_{CG}) &\leq \mathbb{E}(L_{IB_{1}} +  L_{B_{1}C_{1}} + L_{C_{1}C} + L_{CG})  \\
-\mathbb{E}(T_{W} \cdot L_{W} + L_{B_{1}B} + L_{BC}) &\leq \mathbb{E}(L_{B_{1}C_{1}} + L_{C_{1}C})  \\
-\end{align*}
-
-Because $L_{XY}$ is constant, $L_{W}$ is constant, and $L_{B_{1}B} = L_{C_{1}C}$:
-\begin{align*}
-\mathbb{E}(T_{W}) \cdot L_{W} + L_{BC} &\leq L_{B_{1}C_{1}}  \\
-\mathbb{E}(T_{W}) \cdot L_{W} &\leq L_{B_{1}C_{1}} -  L_{BC}   \\
-\mathbb{E}(T_{W}) &\leq \frac{L_{B_{1}C_{1}} -  L_{BC}}{L_{W} }   \\
-\end{align*}
-
-In this case, $T_{W} = 1 \cdot T = T$ , so:
-\begin{align*}
-\mathbb{E}(T) &\leq \frac{L_{B_{1}C_{1}} -  L_{BC}}{L_{W} }   \\
-\frac{1}{\lambda_{B}} &\leq \frac{L_{B_{1}C_{1}} -  L_{BC}}{L_{W} }  \\
-\lambda_{B} &\geq \frac{L_{W}} {L_{B_{1}C_{1}} -  L_{BC}} \\
-\end{align*}
-
-Therefore, the smallest value of $\lambda_{B}$ which guarantees on average that waiting is the better strategy is $\frac{L_{W}} {L_{B_{1}C_{1}} -  L_{BC}}$ and $\lambda_{B} \ne 0$ .
+Therefore, the smallest value of $\lambda_{B}$ on average that waiting is the better strategy is $ \frac {L_{W}} {L_{B_{1}CG} - L_{B_{1}BG} } $.
 
 % ------------------
 \subsection{}
 
-Let $\pi_{0}$ be the policy that the robot drives directly down aisle B.
-
-Let $\pi_{1}$ be the policy that the robot drives down aisle B, encounters an obstacle and waits.
-
-Let $\pi_{2}$ be the policy that the robot drives down aisle B, encounters an obstacle, drives down aisle C.
-
-Let $\pi_{3}$ be the policy that the robot drives directly down aisle C.
-
-As $L(\pi_{0}) = L(\pi_{3})$ and thus $c(L(\pi_{0}) )= c(L(\pi_{3}))$, we will not discuss $\pi_{0}$ here. \\
-
-Then,
+If starting at I and the robot decides to drive down aisle C directly, then on average the path cost via B is greater than that via C, so:
 \begin{align*}
-c(L(\pi_{1})) &= c(L_{IB_{1}} + T_{W} \cdot L_{W} + L_{B_{1}B} + L_{BC} + L_{CG})\\
-c(L(\pi_{2})) &= c(L_{IB_{1}} +  L_{B_{1}C_{1}} + L_{C_{1}C} + L_{CG}) \\
-c(L(\pi_{3})) &= c(L_{IC_{1}} +  L_{C_{1}C} + L_{CG}) \\
+\mathbb{E}(L_{IBG} + \text{waiting cost}) &> \mathbb{E}(L_{ICG})	\\
+L_{IBG} + \mathbb{E}(T_{W}) * L_{W} &> L_{ICG} 	&\quad	&\Leftarrow \text{the path length and $L_{W}$ are constants}	\\
+\mathbb{E}(T_{W}) &> \frac{L_{ICG} - L_{IBG} } {L_{W}}	\\
+\frac{1}{\lambda_{B}} &> \frac{L_{ICG} - L_{IBG} } {L_{W}}	&\quad	&\Leftarrow  \mathbb{E}(T_{W}) = \mathbb{E}(T) = \frac{1}{\lambda_{B}} \\
+\lambda_{B} &< \frac {L_{W}} {L_{ICG} - L_{IBG} } 	\\
 \end{align*}
 
-If the robot decides to drive directly down aisle C, then:
-\begin{align}
-c(L(\pi_{3})) &\leq c(L(\pi_{1})) \\
-c(L(\pi_{3})) &\leq c(L(\pi_{2}))
-\end{align}
-
-by (1) - (2):
-\begin{align*}
-0 &\leq c(L(\pi_{1})) - c(L(\pi_{2})) \\
-0 &\leq \mathbb{E}(L_{IB_{1}} + T_{W} \cdot L_{W} + L_{B_{1}B} + L_{BC} + L_{CG}) - \mathbb{E}(L_{IB_{1}} +  L_{B_{1}C_{1}} + L_{C_{1}C} + L_{CG}) \\
-0 &\leq \mathbb{E} (T_{W}) \cdot L_{W} + L_{BC} - L_{B_{1}C_{1}} \\
-\mathbb{E} (T_{W}) & \geq \frac{L_{B_{1}C_{1}} - L_{BC}} {L_{W}} \\
-\mathbb{E} (T) & \geq \frac{L_{B_{1}C_{1}} - L_{BC}} {L_{W}} \\
-\frac{1}{\lambda_{B}} & \geq \frac{L_{B_{1}C_{1}} - L_{BC}} {L_{W}} \\
-\lambda_{B} & \leq \frac{L_{W}} {L_{B_{1}C_{1}} - L_{BC}} \\
-\end{align*}
-
-Therefore, the maximum value of $\lambda_{B}$ at which the robot will decide to drive directly down C and not attempt to drive down aisle B is $\frac{L_{W}} {L_{B_{1}C_{1}} - L_{BC}}$ and $\lambda_{B} \ne 0$ .
+Therefore, the maximum value of $\lambda_{B}$ at which the robot will decide to drive directly down C is $\frac {L_{W}} {L_{ICG} - L_{IBG} } $.
 
 % ------------------
 \subsection{}
-In this case, $T_{W} = p_{B} \cdot T + (1 - p_{B}) \cdot 0 = p_{B} \cdot T$.
+The event that the robot has to wait after the obstacle has been discovered is now separated into two case: one is the obstacle presents, which has the probability $p_{B}$, and the robot remains alive for T time steps; the other one is the obstacle does not presents, which has the probability $(1-p_{B})$. And in the latter case the time that the robot remains alive is 0. Due to that the event the obstacle presents or not and that the time the obstacle remains active are independent, $T_{W} = p_{B}*T + (1-p_{B}) * 0 = p_{B}*T $.
 
-As $p_{B}$ is constant, $\mathbb{E}(T_{W}) = p_{B} \cdot \mathbb{E}(T) =  p_{B} / \lambda_{B}$. \\
+Then $\mathbb{E}(T_{W}) = \mathbb{E}(p_{B}*T) =p_{B} * \mathbb{E}(T)  = p_{B} / \lambda_{B}$. \\
 
 
-Let $\pi_{1}$ be the policy that the robot drives down aisle B, encounters an obstacle and waits.
-
-Let $\pi_{2}$ be the policy that the robot drives down aisle B, encounters an obstacle, drives down aisle C.
-
-Let $\pi_{3}$ be the policy that the robot drives directly down aisle C.
-
-Since in this situation the robot attempts to drive down aisle B first:
-\begin{align}
-c(L(\pi_{3})) &\geq c(L(\pi_{1})) \\
-c(L(\pi_{3})) &\geq c(L(\pi_{2}))
-\end{align}
-
-Similarly as in the section 1.2, we can obtain that: 
-\[
-\mathbb{E} (T_{W}) \leq \frac{L_{B_{1}C_{1}} - L_{BC}} {L_{W}}
-\]
-
-As $\mathbb{E}(T_{W}) = p_{B} / \lambda_{B}$, $\lambda_{B}$ is a fixed value and $ \lambda_{B} \ne 0$,
+If the the robot attempt to drive aisle B first, then it means:
 \begin{align*}
-p_{B} / \lambda_{B} &\leq \frac{L_{B_{1}C_{1}} - L_{BC}} {L_{W}} \\
-p_{B}  &\leq \frac{\lambda_{B}(L_{B_{1}C_{1}} - L_{BC})} {L_{W}}
+\mathbb{E}(L_{IBG} + \text{waiting cost}) < \mathbb{E}(L_{ICG})	\\
 \end{align*}
 
-Therefore, when $p_{B}$ is below $\frac{\lambda_{B}(L_{B_{1}C_{1}} - L_{BC})} {L_{W}}$, the robot will attempt to drive aisle B first.
+Similarly, we can obtain that:
+\begin{align*}
+\frac{p_{B}}{\lambda_{B}} &< \frac{L_{ICG} - L_{IBG} } {L_{W}}	\\
+p_{B} &< \frac{\lambda_{B}  \cdot (L_{ICG} - L_{IBG})}{L_{W}}
+\end{align*}
+
+Therefore for a fixed value of $\lambda_{B}$ if the value of $p_{B}$ is below $\frac{\lambda_{B}  \cdot (L_{ICG} - L_{IBG})}{L_{W}}$ the robot will attempt to drive aisle B first.
 
 % ------------------
 \subsection{}
 
-Let $\pi_{1}$ be the policy that the robot drives down aisle B and waits.
-
-Let $\pi_{2}$ be the policy that the robot drives down aisle B, encounters an obstacle $O_{B}$, and drives down aisle C.
-
-Let $\pi_{3}$ be the policy that the robot drives down aisle B, encounters an obstacle $O_{B}$, drives down aisle C, and waits.
-
-Let $\pi_{4}$ be the policy that the robot drives down aisle B, encounters an obstacle $O_{B}$, drives down aisle C, encounters an obstacle $O_{C}$, and drives down aisle D.
-
-Let $\pi_{5}$ be the policy that the robot drives directly down aisle D.
-
-Suppose D1 is a cell on the aisle D at the same horizontal level as B1 and C1.
-
-Then,
-\begin{align*}
-c(L(\pi_{1})) &= c(L_{IB_{1}} + T_{WB} \cdot L_{W} + L_{B_{1}B} + L_{BC} + L_{CG})\\
-c(L(\pi_{2})) &= c(L_{IB_{1}} +  L_{B_{1}C_{1}} + L_{C_{1}C} + L_{CG}) \\
-c(L(\pi_{3})) &= c(L_{IB_{1}} +  L_{B_{1}C_{1}} + T_{WC} \cdot L_{W}  + L_{C_{1}C} + L_{CG}) \\
-c(L(\pi_{4})) &= c(L_{IB_{1}} +  L_{B_{1}C_{1}} +  L_{C_{1}D_{1}} + L_{D_{1}D} + L_{DG}) \\
-c(L(\pi_{5})) &= c(L_{ID_{1}} +  L_{D_{1}D} + L_{DG}) \\
-\end{align*}
-
-And,
-\begin{align*}
-\mathbb{E}(T_{WB}) &=  p_{B} / \lambda_{B} \\
-\mathbb{E}(T_{WC}) &=  p_{C} / \lambda_{C}
-\end{align*}
-
-We are looking to the path length, so if the robot drives directly down aisle D, it means:
+In this situation if the robot computes that the path via aisle D is the shortest, it means that:
 \begin{align}
-L(\pi_{5}) &\leq L(\pi_{1}) \\
-L(\pi_{5}) &\leq L(\pi_{2}) \\
-L(\pi_{5}) &\leq L(\pi_{3}) \\
-L(\pi_{5}) &\leq L(\pi_{4}) \\
+\mathbb{E}(L_{IDG}) &< \mathbb{E}(L_{IBG} + T_{WB} * L_{W})	\\
+\mathbb{E}(L_{IDG}) &< \mathbb{E}(L_{ICG} + T_{WC} * L_{W})
 \end{align}
-
-Sum up the four equation, we obtain that:
+Where
 \begin{align*}
-4 L(\pi_{5}) &\leq 4L_{IB_{1}}  + \mathbb{E}(T_{WB}) \cdot L_{W} +  \mathbb{E}(T_{WC}) \cdot L_{W}  
-			+ 3 L_{B_{1}C_{1}} + L_{C_{1}D_{1}} + 4 L_{B_{1}B} 
-			+ L_{BC} + 3L_{CG} + L_{DG} \\
-4 L(\pi_{5}) &\leq 4L_{IB_{1}}  + (p_{B} / \lambda_{B}   +  p_{C} / \lambda_{C}) \cdot L_{W}  
-			+ 3 L_{B_{1}C_{1}} + L_{C_{1}D_{1}} + 4 L_{B_{1}B} 
-			+ L_{BC} + 3L_{CG} + L_{DG} \\
-4 L(\pi_{5}) &\leq 4L_{IB_{1}}  + (p_{B} / \lambda_{B}   +  p_{C} / \lambda_{C}) \cdot L_{W}  
-			+ 4 L_{B_{1}C_{1}} + 4 L_{B_{1}B} 
-			+ 4L_{CG} \\
-L(\pi_{5}) &\leq L_{IB_{1}}  + (p_{B} / \lambda_{B}   +  p_{C} / \lambda_{C}) \cdot 0.25L_{W}  
-			+ L_{B_{1}C_{1}} + L_{B_{1}B} 
-			+ L_{CG} \\
-L(\pi_{5}) &\leq L_{IB_{1}}  + (p_{B} / \lambda_{B}   +  p_{C} / \lambda_{C}) \cdot 0.25L_{W}  
-			+ L_{B_{1}C_{1}} + L_{C_{1}C} 
-			+ L_{CG} \\
+\mathbb{E}(T_{WB}) = p_{B} / \lambda_{B}	\\
+\mathbb{E}(T_{WC}) = p_{C} / \lambda_{C}	\\
 \end{align*}
 
-Let L be the path length of $(L_{IB_{1}}  
-			+ L_{B_{1}C_{1}} + L_{C_{1}C} 
-			+ L_{CG} )$
-			
-Therefore, the upper bound on the value of the path length of the path going down aisle is $L+ 0.25L_{W}\cdot(p_{B} / \lambda_{B}   +  p_{C} / \lambda_{C})$.
+By summing (1) and (2) together:
+\begin{align*}
+2 \cdot \mathbb{E}(L_{IDG}) &<  \mathbb{E}(L_{IBG} + T_{WB} * L_{W}) + \mathbb{E}(L_{ICG} + T_{WC} * L_{W}) \\
+2 \cdot L_{IDG} &< L_{IBG} + \mathbb{E}(T_{WB}) * L_{W} + L_{ICG} + \mathbb{E}(T_{WC}) * L_{W}	\\
+2 \cdot L_{IDG} &< L_{IBG} + L_{ICG} + L_{W} \cdot (\mathbb{E}(T_{WB}) + \mathbb{E}(T_{WC})) 	\\
+2 \cdot L_{IDG} &< L_{IBG} + L_{ICG} + L_{W} \cdot (p_{B} / \lambda_{B}+p_{C} / \lambda_{C}) 	\\\
+L_{IDG} &< 0.5L_{IBG} + 0.5L_{ICG} + 0.5L_{W} \cdot (p_{B} / \lambda_{B}+p_{C} / \lambda_{C}) 	\\
+\end{align*}
 
-\pagebreak
+Therefore, if the path via aisle D is the shortest path then the upper bound on the value of the path length is $0.5L_{IBG} + 0.5L_{ICG} + 0.5L_{W} \cdot (p_{B} / \lambda_{B}+p_{C} / \lambda_{C}) $.
+
+
+\newpage
 % -------------------------------------------------------------------------------------------
 \section{Implement System in ROS}
 
@@ -257,57 +153,50 @@ The result is shown in Fig. \ref{performance2.1}. The start point is marked purp
 % ------------------
 \subsection{}
 
+We first implement the \textit{waitUntilTheObstacleClears()}. To meet the requirements we first find the obstructed cell in the current path waypoints. Then the function keeps checking the cell status with an infinite loop, and returns only if the status has been updated and became empty. 
+
+To determine whether the robot should wait or not, we need to compute the travel cost of the remaining original path and the new planned path from the current position. For the latter we can simply use the function \textit{planPathToGoalViaAisle()} to re-plan a new path and then obtain the travel cost from the provided path property \textit{path.travelCost}. Coming to the remaining original path cost, we need to get the travel cost of the path from original start cell to current position first. Then what we want is the travel cost of the current (or original) path minus it. 
+
+At the end of the function we calculate the threshold value of the expected $T_{W}$ (= $\frac{\text{remaining original path cost} - \text{new path cost}}{L_{W}}$) and also the corresponding $\lambda_{B}$ ($ = 1/ \mathbb{E}(T_{W})$), and output to terminal. If the $T_{W}$ we feed in is less than or equal to the threshold value, then the function \textit{shouldWaitUnitlTheObstacleToClear()} returns true.
+
+\begin{figure}[H]
+\centering  
+\subfigure[Data]{
+\includegraphics[width=0.5\textwidth]{graphs/part2/2-2/data.png}
+\label{2-2resultData}
+}
+\subfigure[The search grid. The robot detects the obstacle when it reached the circled cell.]{
+\includegraphics[width=0.7\textwidth]{graphs/part2/2-2/twoPathsSG2.png}
+\label{twoPathSG}
+}
+\caption{Result of a single run}
+\label{result2.2}
+\end{figure}
+
+Fig.\ref{result2.2} shows the result of a single run of our implementation. From the Fig.\ref{2-2resultData} we can see that the new path cost is 112.0538 while the remaining original path cost (excluding the waiting time) is 99.0833. If the wait time we feed in is less than or equal to the threshold $T_{W}$ (6.4853) then the robot will wait until the obstacle clear, else the robot will drive down aisle C. In other words, the minimum value of $T_{W}$ to make the robot move is 6.4853, and thus the maximum value of $\lambda_{B}$ below which the robot will move if it encounters the obstacle is 0.1541
+
 % ------------------
 \subsection{}
 
-\pagebreak
-% -------------------------------------------------------------------------------------------
+We use the function \textit{planPathToGoalViaAisle()} to plan the paths via aisle B and via aisle C. We only consider the two paths here due to that there is only a single active obstacle and it always presents in aisle B. The travel cost is obtained by using the provided path property \textit{path.travelCost}. We then calculate the threshold expected $T_{W}$ (= $\frac{\text{pathCost\_C} - \text{pathCost\_B}}{L_{W}}$) and the corresponding $\lambda_{B}$ ($ = p/ \mathbb{E}(T_{W})$) and output the values to terminal. With the threshold values, the waiting time is then input by users from terminal to determine which path the robot will choose. If the waiting time greater than or equal to the threshold value then the robot will go down the aisle C.
 
-\bibliographystyle{unsrt}  
-\begin{thebibliography}{1}
+\begin{figure}[H]
+\centering  
+\subfigure[Data]{
+\includegraphics[width=0.7\textwidth]{graphs/part2/2-3/data.png}
+\label{2-3resultData}
+}
+\subfigure[The search grid. The yellow path is the path via aisle B, and the blue one is via aisle C.]{
+\includegraphics[width=0.7\textwidth]{graphs/part2/2-3/SG.png}
+\label{2-3SG}
+}
+\caption{Result of a single run of our implementation}
+\label{result2.3}
+\end{figure}
 
+Fig.\ref{2-3resultData}  shows the values of travel cost of the two paths of a single run(excluding the waiting cost if it encounters an obstacle at aisle B) and the values of the threshold of the waiting-time-related parameters. There is little difference between the travel cost of the two paths if we do not take the waiting time into consider. The threshold expected $T_{W}$ tells that if the waiting time is greater than or equal to 0.2928, then the robot will go directly down aisle C. So the maximum value of $\lambda_{B}$ is 2.7313.
 
- \bibitem{WFD}
- Anirudh Topiwala; Pranav Inani; Abhishek Kathpal
-\newblock (2018)
-\newblock Frontier Based Exploration for Autonomous Robot
-\newblock {\em<https://arxiv.org/abs/1806.03581>}.
-
- \bibitem{2}
-Brian Yamauchi
-\newblock (1997)
-\newblock  A Frontier-Based Approach for Autonomous Exploration
-\newblock {\em<https://www.semanticscholar.org/paper/A-frontier-based-approach-for-autonomous-Yamauchi/a1875055e9c526cbdc7abb161959d76d14b58266>}.
-
- \bibitem{InfoTheoretic}
-Callum Rhodes; Cunjia Liu; Wen-Hua Chen
-\newblock (2019)
-\newblock An Information Theoretic Approach to Path Planning for Frontier Exploration
-\newblock {\em<https://www.researchgate.net/publication/331929185\_An\_Information\_Theoretic\_Approach\_to\_Path\_Planning\_for\_Frontier\_Exploration>}.
-
- \bibitem{3}
-Steven M. LaValle
-\newblock (2006)
-\newblock Planning Algorithm
-\newblock {\em<http://planning.cs.uiuc.edu>}.
-
- \bibitem{4}
-Matan Keidar; Gal A. Kaminka
-\newblock Efficient Frontier Detection for Robot Exploration
-\newblock Volume: 33 issue: 2
-\newblock page(s):215-236
-\newblock First published online: October 22, 2013
-\newblock Issue published: February 1, 2014
-
- \bibitem{5}
-Robert M. Gray
-\newblock (2013)
-\newblock Entropy and Information Theory
-\newblock {\em<https://ee.stanford.edu/\~gray/it.pdf>}.
-
-
-
-\end{thebibliography}
+\newpage
 
 
 % -----------------------------------------------------------------------------------------

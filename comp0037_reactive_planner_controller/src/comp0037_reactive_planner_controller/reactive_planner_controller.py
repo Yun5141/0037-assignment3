@@ -88,11 +88,7 @@ class ReactivePlannerController(PlannerControllerBase):
         return Aisle.E
 
     # ------- Part 2-2 -------
-    def getPathCost(self,startCellCoords,goalCellCoords):
-        pathFound = self.planner.search(startCellCoords, goalCellCoords)
-        path = self.planner.extractPathToGoal()
-        return path.travelCost
-
+    
     # Return whether the robot should wait for the obstacle to clear or not.
     def shouldWaitUntilTheObstacleClears(self, startCellCoords, goalCellCoords):
 
@@ -100,7 +96,9 @@ class ReactivePlannerController(PlannerControllerBase):
         remainingOriginalPathCost = 0
         oldFullPathCost = self.currentPlannedPath.travelCost
         originalStartCell = self.currentPlannedPath.waypoints[0]
-        remainingOriginalPathCost = oldFullPathCost - self.getPathCost(originalStartCell.coords, startCellCoords)
+        path0Found = self.planner.search(originalStartCell.coords, startCellCoords) # note that startCellCoords is the robot current position
+        path0 = self.planner.extractPathToGoal()
+        remainingOriginalPathCost = oldFullPathCost - path0.travelCost
 
         # --- new path cost ---
         newPath = self.planPathToGoalViaAisle(startCellCoords, goalCellCoords,self.chooseAisle(startCellCoords,goalCellCoords))
